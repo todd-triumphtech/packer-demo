@@ -16,8 +16,8 @@ phases:
       ### Manually capture and configure the AWS CLI to provide HashiCorp Packer with AWS credentials
       ### More info here: https://github.com/mitchellh/packer/issues/4279
       - echo "Configuring AWS credentials"
-      - echo "Building HashiCorp Packer template, amazon-linux_packer-template.json"
-      - ./packer build amazon-linux_packer-template.json
+      - echo "Building HashiCorp Packer template, aws-ubuntu.pkr.hcl"
+      - ./packer build aws-ubuntu.pkr.hcl
   post_build:
     commands:
       - echo "HashiCorp Packer build completed on `date`"
